@@ -54,3 +54,26 @@ public:
     template <typename VST>
     void traverse(VST&);
 };
+
+template <typename T>
+void List<T>::init() {
+    header = new ListNode<T>;
+    trailer = new ListNode<T>;
+    header->succ = trailer; header->pred = NULL;
+    trailer->pred = header; trailer->succ = NULL;
+    _size = 0;
+}
+
+template <typename T>
+T& List<T>::operator[](Rank r) const {
+    ListNodePosi(T) p = first();
+    while (0 < r--) p = p->succ;
+    return p->data;
+}
+
+template <typename T>
+ListNodePosi(T) List<T>::find(T const& e, int n, ListNodePosi(T) p) const {
+    while (0 < n--)
+        if (e == (p = p->pred)->data) return p;
+    return NULL;
+}
