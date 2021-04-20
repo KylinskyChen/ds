@@ -1,7 +1,7 @@
 /*
  * 作者：解琛；
  * 时间：2021 年 4 月 19 日；
- * 功能：Vector 模板类；
+ * 功能：Vector；
  */
 
 typedef int Rank;

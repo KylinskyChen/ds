@@ -1,3 +1,9 @@
+/*
+ * 作者：解琛；
+ * 时间：2021 年 4 月 19 日；
+ * 功能：List；
+ */
+
 #include "listNode.h"
 
 template <typename T> class List {
